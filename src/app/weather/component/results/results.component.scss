@@ -1,0 +1,32 @@
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
+    -moz-box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
+    position: relative;
+    width: 600px;
+    margin-top: 30px;
+    border-spacing: 0px;
+    .thead-dark {
+        padding: 20px;
+        background-color: #6c7ae0;
+        color: white;
+    }
+    td {
+        border: none;
+        padding: 20px;
+        text-align: left;
+    }
+    th {
+        border: none;
+        padding: 20px;
+        text-align: left;
+    }
+    tbody tr:nth-child(even) {
+        background-color: #f8f6ff;
+    }
+}
+.text-center {
+    text-align: center !important;
+}

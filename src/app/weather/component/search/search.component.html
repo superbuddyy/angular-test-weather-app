@@ -1,0 +1,23 @@
+<form [formGroup]="searchForm" class="form-inline mb-5" (ngSubmit)="onSearch()">
+    <div class="form-group col-8 pl-0">
+        <div class="group">      
+            <input 
+                type="text" 
+                id="city"
+                name="city"
+                formControlName="city"
+                (keydown)="onKeydown()"
+                required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>City Name</label>
+            <div *ngIf="searchForm?.get('city')?.invalid && (searchForm?.get('city')?.dirty || searchForm.get('city')?.touched)"
+                class="form-control-feedback">City Name is required
+            </div>
+            <div *ngIf="searchError" class="form-control-feedback">City not found. Try again with correct city name.
+            </div>
+        </div>
+        
+    </div>
+    <button class="button-29" role="button" type="submit">Search</button>
+</form>

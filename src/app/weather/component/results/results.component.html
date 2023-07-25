@@ -1,0 +1,30 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">City</th>
+        <th scope="col">0 AM</th>
+        <th scope="col">6 AM</th>
+        <th scope="col">12 PM</th>
+        <th scope="col">6 PM</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="cityWeathers.length > 0">
+      <tr *ngFor="let cityWeather of cityWeathers">
+        <td scope="row">{{cityWeather.city}}</td>
+        <td scope="row">{{cityWeather?.weathers?.[0]?.temperature}} &deg;</td>
+        <td scope="row">{{cityWeather?.weathers?.[2]?.temperature}} &deg;</td>
+        <td scope="row">{{cityWeather?.weathers?.[4]?.temperature}} &deg;</td>
+        <td scope="row">{{cityWeather?.weathers?.[6]?.temperature}} &deg;</td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="cityWeathers.length == 0">
+      <tr scope="row">
+        <td *ngIf="!loading" class="text-center" colspan="5">
+          No city weather searched.
+        </td>
+        <td *ngIf="loading" class="text-center" colspan="5">
+          Loading....
+        </td>
+      </tr>
+    </tbody>
+  </table>

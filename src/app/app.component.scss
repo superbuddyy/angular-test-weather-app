@@ -1,0 +1,13 @@
+.navbar {
+    height: 50px;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-dark {
+    color: white;
+    background-color: #3c5b9d;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}

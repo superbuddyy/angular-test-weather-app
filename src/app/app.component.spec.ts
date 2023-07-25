@@ -1,11 +1,19 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { WeatherModule } from './weather/weather.module';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
+    imports: [
+      BrowserModule,
+      AppRoutingModule,
+      WeatherModule
+    ],
+    declarations: [
+      AppComponent,
+    ]
   }));
 
   it('should create the app', () => {
